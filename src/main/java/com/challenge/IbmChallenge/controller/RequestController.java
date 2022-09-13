@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -25,8 +24,20 @@ public class RequestController {
         return requestService.getAllRequests();
     }
 
+    @GetMapping("/api/getLastRequests")
+    public List<Request> getFive(){
+        return requestService.getLastRequests();
+    }
+
     @PostMapping("/api/newRequest")
-    public void newRequest(@RequestParam(value = "query") String query){
-        requestService.saveRequest(new Request(query, LocalDateTime.now()));
+    public String newRequest(@RequestParam(value = "query") String query){
+        requestService.saveRequest(new Request(query, java.time.LocalDateTime.now()));
+        return "Query for searching: " + query;
+    }
+
+    @GetMapping("/api/getString")
+    public String returnQuery(@RequestParam(value = "string") String string){
+        return requestService.returnQuery(string);
     }
 }
+
