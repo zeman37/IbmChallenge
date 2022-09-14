@@ -70,6 +70,10 @@ public class RequestService {
             } catch (IndexOutOfBoundsException e){}
         }
 
+        if(requestText.equals("")){
+            requestText = "blue screen pokemon";
+        }
+
         System.out.println("==========================================" + requestText + "==========================================");
         System.out.println(response);
 
