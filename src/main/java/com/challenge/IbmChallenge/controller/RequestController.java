@@ -3,14 +3,12 @@ package com.challenge.IbmChallenge.controller;
 import com.challenge.IbmChallenge.model.Request;
 import com.challenge.IbmChallenge.service.RequestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin("*") //for testing purposes
 public class RequestController {
 
     private final RequestService requestService;
@@ -37,6 +35,7 @@ public class RequestController {
 
     @GetMapping("/api/getString")
     public String returnQuery(@RequestParam(value = "string") String string){
+        requestService.saveRequest(new Request(string, java.time.LocalDateTime.now()));
         return requestService.returnQuery(string);
     }
 }

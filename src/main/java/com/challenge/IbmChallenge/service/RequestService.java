@@ -48,6 +48,7 @@ public class RequestService {
         AnalyzeOptions parameters = new AnalyzeOptions.Builder()
                 .text(text)
                 .features(features)
+                .language("en")
                 .build();
 
         AnalysisResults response = naturalLanguageUnderstanding
