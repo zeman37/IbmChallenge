@@ -42,7 +42,7 @@ public class RequestService {
 
     //Method which returns user's query interpreted by Watson Natural Language AI
     public String returnQuery(String text){
-        naturalLanguageUnderstanding.setServiceUrl("https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/c29555f9-3f30-46ce-8240-4e701cb21b8c");
+        naturalLanguageUnderstanding.setServiceUrl("https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/c29555f9-3f30-46ce-8240-4e701cb21b8c"); //Defining service url.
         String requestText = "";
 
         //Since my choice will be keywords and concepts, initializing their classes.
