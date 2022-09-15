@@ -19,9 +19,7 @@ By using this application, it will be possible to:
 - MYSQL_PORT
 - MYSQL_USER
 - MYSQL_PASSWORD
-- SERVER_PORT - port on which this app will be running
 - APIKEY - Watson Natural Language Understanding API KEY
-- GIPHY_API - Giphy API key
 ## Installation
 
 In order to build this application, you need to download .ZIP file of code or clone Git repository.
