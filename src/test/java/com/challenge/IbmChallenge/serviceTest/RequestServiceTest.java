@@ -15,7 +15,6 @@ public class RequestServiceTest {
     @Autowired
     private RequestService requestService;
 
-
     @Test
     void shouldAiQuery(){
         Assertions.assertNotNull(requestService.returnQuery("Search for gif"));
