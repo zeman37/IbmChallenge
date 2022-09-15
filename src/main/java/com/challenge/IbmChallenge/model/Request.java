@@ -3,11 +3,12 @@ package com.challenge.IbmChallenge.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+//declaring our entity, which will go into database
 @Entity
-@Table(name = "requests")
+@Table(name = "requests") //specifying database name
 public class Request {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //ID goes auto generated
     @Column(name = "id")
     private int id;
     @Column(name = "request")
@@ -23,6 +24,8 @@ public class Request {
     public Request() {
 
     }
+
+    //getters and setters
 
     public int getId() {
         return id;

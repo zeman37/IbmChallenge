@@ -3,6 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!--Applying 2nd point of 12 Factor App: Explicitly declare and isolate dependencies-->
+	<!--5th point of 12 Factor App: Strictly separate build and run stages. Maven does that for us-->
 
 
 	<modelVersion>4.0.0</modelVersion>
@@ -55,6 +56,13 @@
 			<groupId>com.github.eirslett</groupId>
 			<artifactId>frontend-maven-plugin</artifactId>
 			<version>1.12.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-antrun-plugin</artifactId>
+			<version>3.1.0</version>
+			<type>maven-plugin</type>
 		</dependency>
 	</dependencies>
 
