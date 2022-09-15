@@ -5,14 +5,14 @@ import axios from "axios";
 
 function App() {
 
-    const Api_key=process.env.GIPHY_API;
+    const Api_key=process.env.GIPHY_API; //Giphy API key is read from System environment variable
     const Base_Url = "http://api.giphy.com/v1/gifs/search";
 
     const [searchGif,setSearchGif] = useState("");
     const [gifs,setGifs] = useState([]);
 
 
-    function QueryList() {
+    function QueryList() { //function which return last 5 requests from database
       const [dataList, setDataList] = useState([]);
 
       useEffect(() => {
@@ -40,10 +40,10 @@ function App() {
           gifResponse();
         }
 
-        const gifResponse = async()=>{
-          const ai = await (await axios(`http://localhost:${process.env.SERVER_PORT}/api/getString?string=${searchGif}`)).data
+        const gifResponse = async()=>{ //function which returns gif data from giphy API using AI (backend) interpreted string
+          const ai = await (await axios(`http://localhost:${process.env.SERVER_PORT}/api/getString?string=${searchGif}`)).data //asking back-end to interpret user input string
           console.log(ai)
-          const response = await axios(`${Base_Url}?api_key=${Api_key}&q=${ai}&limit=1&offset=0&rating=g&lang=en`)
+          const response = await axios(`${Base_Url}?api_key=${Api_key}&q=${ai}&limit=1&offset=0&rating=g&lang=en`) //getting gif data using AI interpreted string
             setGifs(response.data.data);
            console.log(response.data.data);
          }
@@ -56,7 +56,7 @@ function App() {
                     class="inputs"
                     placeholder="Input phrase"
                     value={searchGif}
-                    onInput={(e)=>setSearchGif(e.target.value)}
+                    onInput={(e)=>setSearchGif(e.target.value)} //collecting user input to searchGif variable
                   />
                   <div class="searchButtonField">
                     <button class="button-85" role="button" onClick={postValue}>
@@ -66,7 +66,7 @@ function App() {
                 </div>
                 {
                   gifs.map((gif)=>{
-                    return <img src={gif.images.fixed_height.url} />
+                    return <img src={gif.images.fixed_height.url} /> //listing gif
                   })
                 }
                 <QueryList/>
