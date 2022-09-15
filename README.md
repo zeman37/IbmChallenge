@@ -41,4 +41,4 @@ is located. Use command:
 
 ## Using Application
 
-![](https://github.com/zeman37/IbmChallenge/blob/master/HowToUse.gif)
+![]([https://github.com/zeman37/IbmChallenge/blob/master/HowToUse.gif](https://github.com/zeman37/IbmChallenge/blob/master/HowToUse.gif?raw=true))
