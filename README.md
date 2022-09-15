@@ -38,7 +38,9 @@ built application will appear in target folder:
 To run application, open PowerShell/Command Prompt in the same folder where "IbmChallenge-0.0.1-SNAPSHOT.jar"
 is located. Use command:
 `java -jar IbmChallenge-0.0.1-SNAPSHOT.jar` to run the application.
+Application will be accessible via: "http://localhost:8080"
 
 ## Using Application
+Wait, gif will appear soon:)
 
 ![](https://github.com/zeman37/IbmChallenge/blob/master/HowToUse.gif?raw=true)
