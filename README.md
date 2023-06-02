@@ -1,4 +1,4 @@
-# IBM Internship Exercise: Cloud Native Application Developer
+# IBM CHallenge: Cloud Native Application Developer
 
 ## Description
 
