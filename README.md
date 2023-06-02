@@ -1,4 +1,4 @@
-# IBM CHallenge: Cloud Native Application Developer
+# IBM Challenge: Cloud Native Application Developer
 
 ## Description
 
